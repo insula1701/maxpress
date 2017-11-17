@@ -1,0 +1,8 @@
+/* 在default.css之后引入，将覆盖默认样式 */
+/* 建议留空，如有特殊需要可以进行自定义 */
+
+/*
+h3 {
+  text-align: center !important;
+}
+*/

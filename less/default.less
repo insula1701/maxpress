@@ -1,0 +1,229 @@
+// 运行时自动解析为css/default.css
+
+@import 'less/vars.less';
+
+
+.wrapper {
+  font-size: @main_size;
+  letter-spacing: 0.1em;
+  color: @text_color;
+  margin: auto 20%;
+  text-align: justify;
+}
+
+p, ul, ol, blockquote, q, pre, code {
+  line-height: @line_height;
+}
+
+p {
+  margin: @para_spacing @main_margin !important;
+}
+
+strong, b{
+  color: @accent_color;
+}
+
+em, i {
+  color: @accent_color;
+}
+
+h1, h2 {
+  font-weight: bold !important;
+  color: @accent_color !important;
+  margin: @para_spacing @main_margin !important;
+  text-align: left !important;
+}
+
+h3, h4, h5, h6 {
+  font-weight: bold !important;
+  color: @accent_color !important;
+  margin: @para_spacing @main_margin !important;
+  text-align: @title_align !important;
+}
+
+h1 {
+  font-size: @main_size + 8px !important;
+  border-bottom: 1px solid #ddd !important;
+}
+
+h2 {
+  font-size: @main_size + 4px !important;
+  border-bottom: 1px solid #eee !important;
+}
+
+h3 {
+  font-size: @main_size + 2px;
+}
+
+h4 {
+  font-size: @main_size;
+}
+
+h5 {
+  font-size: @main_size - 2px;
+}
+
+h6 {
+  font-size: @main_size - 4px;
+}
+
+hr {
+  border-top: 2px solid @accent_color;
+  margin: @para_spacing * 2 @main_margin;
+}
+
+table, dl, blockquote, q, ul, ol {
+  margin: @para_spacing @main_margin;
+}
+
+ul, ol {
+  padding-left: 1.5em;
+  font-size: @main_size;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+li {
+  margin: @para_spacing * 0.5 0;
+  font-size: @main_size - 1px;
+  color: @text_color + #000001;
+}
+
+li span, li p {
+  margin: @para_spacing * 0.5 0;
+  font-size: @main_size - 2px;
+  color: @text_color + #000002;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+  margin: 0;
+  padding-left: 1em;
+}
+
+blockquote, q {
+  border: 2px dotted #ddd;
+  border-radius: 0.7em;
+  padding: 0 10px;
+  color: @quote_color;
+  quotes: none;
+  margin: auto @main_margin;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+  content: none;
+}
+
+pre, code {
+  font-size: @main_size - 2px !important;
+  color: @quote_color;
+}
+
+pre {
+  line-height: @line_height - 0.1em;
+  display: block !important;
+  background-color: white;
+}
+
+code {
+  white-space: pre-wrap;
+  padding: 3px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  display: inline;
+}
+
+pre code {
+  white-space: pre;
+  overflow: auto;
+  padding: 3px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  display: block !important;
+  margin: auto @main_margin !important;
+}
+
+.tbl-wrapper {
+  margin: 0 @main_margin;
+}
+
+table {
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+  font: inherit;
+  border: 0;
+  margin: 0 auto;
+}
+
+.img-wrapper {
+  margin: 0 @main_margin;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+img.center {
+  display: block;
+  margin: 0 auto;
+}
+
+tbody {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+table tr {
+  border: 0;
+  border-top: 1px solid #CCC;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+table tr th, table tr td {
+  font-size: 14px;
+  border: 1px solid #CCC;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+table tr th {
+  font-weight: bold;
+  color: #eee;
+  border: 1px solid @accent_color;
+  background-color: @accent_color;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 1em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+dl dd {
+  margin: 0 0 10px;
+  padding: 0 10px;
+}
+
+a {
+  color: @accent_color;
+  text-decoration: none;
+}
+
+
+
