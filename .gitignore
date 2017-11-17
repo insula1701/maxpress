@@ -1,4 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 
 .DS_Store
+__pycache__/
 .idea
+build/
+dist/
+*.spec
+
