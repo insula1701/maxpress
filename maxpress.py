@@ -119,22 +119,30 @@ def convert_all(src=join_path('workspace', 'md'), dst=join_path('workspace', 'ht
 
             if archive:
                 print('正在存档{}...'.format(file), end=' ')
-                archive_path = join_path('workspace', 'archive')
-                if not os.path.exists(archive_path): os.mkdir(archive_path)
-                os.rename(join_path(src, file), join_path(archive_path, file))
+                arch_dir = join_path('workspace', 'archive')
+                if not os.path.exists(arch_dir): os.mkdir(arch_dir)
+                filepath, default_archpath = join_path(src, file), join_path(arch_dir, file)
+                count = 0
+                while True:
+                    try:
+                        suffix = '(%d)' % count if count > 0 else ''
+                        archpath = default_archpath[:-3] + suffix + '.md'
+                        os.rename(filepath, archpath); break
+                    except FileExistsError:
+                        count +=1; pass
                 print('存档成功!')
 
-    print('\n请进入workspace／html目录查看所有生成的HTML文档')
-    print('请进入workspace／archive目录查看所有存档的Markdown文档')
+    print('\n请进入workspace／html查看所有生成的HTML文档')
+    print('请进入workspace／archive查看所有存档的Markdown文档')
 
 
 if __name__ == '__main__':
 
     # 全部转换并存档
-    # convert_all()
+    convert_all()
 
     # 只转换不存档
-    convert_all(archive=False)
+    # convert_all(archive=False)
 
 
 
