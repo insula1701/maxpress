@@ -43,7 +43,7 @@
 
 #### 更多自定义
 
-1. 如果你希望覆盖默认样式中的个别样式，可以自主编写`custom.css`，它将在`default.css`之后被引入。
+如果你希望覆盖默认样式中的个别样式，可以自主编写`custom.css`，它将在`default.css`之后被引入。
 
 #### 示例
 
@@ -66,9 +66,9 @@
 
 #### 运行
 
-直接运行`maxpress.py`：`python maxpress.py`
+直接运行：`python maxpress.py`
 
-作为模块导入：
+或者作为模块导入：
 
 ```
 import maxpress
