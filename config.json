@@ -14,10 +14,10 @@
 
 {
   "main_size": "16px",
-  "main_margin": "15%",
-  "line_height": "4em",
+  "main_margin": "3%",
+  "line_height": "2em",
   "para_spacing": "1.5em",
-  "title_align": "center",
+  "title_align": "left",
   "text_color": "#555",
   "theme_color": "#02ccba",
   "quote_color": "#999",
