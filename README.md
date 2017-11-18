@@ -69,7 +69,7 @@
 
 设计思路及部分默认样式参考了：
  - [可能吧公众号的文章是如何排版的？](https://kenengba.com/post/3507.html)
- - 李笑来[`markdownhere.css`](https://gist.github.com/xiaolai/aa190255b7dde302d10208ae247fc9f2)；
+ - 李笑来[`markdownhere.css`](https://gist.github.com/xiaolai/aa190255b7dde302d10208ae247fc9f2)
  - [MDPUB](http://md.codingpy.com/)
 
 ## License
