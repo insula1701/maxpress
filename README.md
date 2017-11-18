@@ -14,7 +14,7 @@
 
 1. 使用Markdown创作你的内容，保存为`.md`文件，放入`workspace/md`目录中。（可以添加多个`.md`文件，支持批量转换）
 2. 运行`maxpress.py`，`workspace／html`目录下将生成同名`.html`文件；同时原始`.md`的文件将被移动到`workspace／archive`目录中存档。
-3. 用浏览器打开生成的`.html`文件，全选复制，粘贴到微信编辑器中。
+3. 用Chrome浏览器打开生成的`.html`文件，全选复制，粘贴到微信编辑器中。
 4. 检查，预览，调整。
 
 **【注意】推送前请务必发送到手机预览仔细检查，作者不为最终样式的绝对正确担保。**
@@ -28,7 +28,7 @@
 | 变量名 | 默认值 | 说明 |
 | :----- | :----- | :---- |
 |main_size     |16px   |正文主字号|
-|theme_color  |#02ccba|主题色，用于标题、强调元素等文字颜色|
+|theme_color   |#02ccba|主题色，用于标题、强调元素等文字颜色|
 |text_color    |#555   |正文文字颜色|
 |quote_color   |#999   |引用框和代码框内文字颜色|
 |line_height   |2em    |正文行高|
@@ -53,14 +53,18 @@
 
 ## 后续开发计划
 
-- [ ] 自动在文首添加引导关注Banner
+- [ ] 可选在文首自动添加引导关注Banner
 - [ ] 代码的精简&重构（不影响功能）
-- [ ] 支持更多样的文中小标题设置模式
-- [ ] 支持Hexo博客直接转换
+- [ ] 支持更多样化的文中小标题模式配置
+- [ ] 支持Hexo博客文章的直接转换
+- [ ] 简化HTML及CSS自定义流程
 
 ## Reference
 
-默认样式部分参考了李笑来[`markdownhere.css`](https://gist.github.com/xiaolai/aa190255b7dde302d10208ae247fc9f2)
+设计思路及部分默认样式参考了：
+ - [可能吧公众号的文章是如何排版的？](https://kenengba.com/post/3507.html)
+ - 李笑来[markdownhere.css](https://gist.github.com/xiaolai/aa190255b7dde302d10208ae247fc9f2)；
+ - [MDPUB](http://md.codingpy.com/)
 
 ## License
 

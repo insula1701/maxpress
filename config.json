@@ -17,9 +17,9 @@
   "main_margin": "3%",
   "line_height": "2em",
   "para_spacing": "1.5em",
-  "title_align": "left",
+  "title_align": "center",
   "text_color": "#555",
-  "theme_color": "#02ccba",
+  "theme_color": "#3fa944",
   "quote_color": "#999",
   "poster_url": ""
 
