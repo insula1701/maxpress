@@ -139,10 +139,10 @@ def convert_all(src=join_path('workspace', 'md'), dst=join_path('workspace', 'ht
 if __name__ == '__main__':
 
     # 全部转换并存档
-    # convert_all()
+    convert_all()
 
     # 只转换不存档
-    convert_all(archive=False)
+    # convert_all(archive=False)
 
 
 

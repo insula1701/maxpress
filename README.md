@@ -1,5 +1,11 @@
 # MaxPress：MarkDown+Python实现微信公众号一键排版
 
+## 基本功能
+
+1. 批量转换MarkDown文档为适合粘贴微信编辑器的HTML文件。
+2. 支持自定义：正文字号、文字颜色（正文颜色、主题色、引用色）、行间距、段间距、标题水平对齐方式、内容两侧留白比例、底部图片。
+3. 转换完成的MarkDown文档自动移动存档。
+
 ## 环境
 
 使用Python 3.5.2开发，CSS样式表使用LESS编译。
@@ -33,7 +39,7 @@
 |quote_color   |#999   |引用框和代码框内文字颜色|
 |line_height   |2em    |正文行高|
 |para_spacing  |1.5em  |正文段间距|
-|title_align   |left   |标题水平方式，建议`left`或`center`（仅支持h3-h6，h1、h2固定使用左对齐）|
+|title_align   |left   |标题水平对齐方式，建议`left`或`center`（仅支持h3-h6，h1、h2固定使用左对齐）|
 |main_margin   |3%     |内容两侧留白比例|
 |poster_url    |""     |底部二维码／海报图片的地址|
 
