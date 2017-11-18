@@ -7,19 +7,19 @@
   para_spacing: 正文段间距
   title_align: 标题水平对齐方式，建议left或center（仅支持h3-h6，h1、h2固定使用左对齐）
   text_color: 正文文字颜色
-  accent_color: 强调色，用于标题、强调元素等文字颜色
+  theme_color: 主题色，用于标题、强调元素等文字颜色
   quote_color: 引用框和代码框内文字颜色
   poster: 文章底部图片的url，通常是二维码或宣传海报，如"http://placeholder.qiniudn.com/900x600"
 */
 
 {
   "main_size": "16px",
-  "main_margin": "3%",
-  "line_height": "2em",
+  "main_margin": "15%",
+  "line_height": "4em",
   "para_spacing": "1.5em",
   "title_align": "center",
   "text_color": "#555",
-  "accent_color": "#02ccba",
+  "theme_color": "#02ccba",
   "quote_color": "#999",
   "poster_url": ""
 

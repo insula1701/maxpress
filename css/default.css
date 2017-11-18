@@ -1,9 +1,10 @@
 .wrapper {
  font-size: 16px;
  letter-spacing: 0.1em;
- color: #555555;
+ color: #2298a5;
  margin: auto 20%;
  text-align: justify;
+ font-family: Consolas, Menlo, Courier, monospace;
 }
 p,
 ul,
@@ -12,10 +13,10 @@ blockquote,
 q,
 pre,
 code {
- line-height: 2em;
+ line-height: 4em;
 }
 p {
- margin: 1.5em 3% !important;
+ margin: 1.5em 15% !important;
 }
 strong,
 b {
@@ -29,7 +30,7 @@ h1,
 h2 {
  font-weight: bold !important;
  color: #02ccba !important;
- margin: 1.5em 3% !important;
+ margin: 1.5em 15% !important;
  text-align: left !important;
 }
 h3,
@@ -38,7 +39,7 @@ h5,
 h6 {
  font-weight: bold !important;
  color: #02ccba !important;
- margin: 1.5em 3% !important;
+ margin: 1.5em 15% !important;
  text-align: center !important;
 }
 h1 {
@@ -63,7 +64,7 @@ h6 {
 }
 hr {
  border-top: 2px solid #02ccba;
- margin: 3em 3%;
+ margin: 3em 15%;
 }
 table,
 dl,
@@ -71,7 +72,7 @@ blockquote,
 q,
 ul,
 ol {
- margin: 1.5em 3%;
+ margin: 1.5em 15%;
 }
 ul,
 ol {
@@ -84,13 +85,13 @@ ul {
 li {
  margin: 0.75em 0;
  font-size: 15px;
- color: #555556;
+ color: #2298a6;
 }
 li span,
 li p {
  margin: 0.75em 0;
  font-size: 14px;
- color: #555557;
+ color: #2298a7;
 }
 ul ul,
 ul ol,
@@ -106,7 +107,7 @@ q {
  padding: 0 10px;
  color: #999999;
  quotes: none;
- margin: auto 3%;
+ margin: auto 15%;
 }
 blockquote::before,
 blockquote::after,
@@ -120,7 +121,7 @@ code {
  color: #999999;
 }
 pre {
- line-height: 1.9em;
+ line-height: 3.9em;
  display: block !important;
  background-color: white;
 }
@@ -138,10 +139,10 @@ pre code {
  border: 1px solid #dddddd;
  border-radius: 3px;
  display: block !important;
- margin: auto 3% !important;
+ margin: auto 15% !important;
 }
 .tbl-wrapper {
- margin: 0 3%;
+ margin: 0 15%;
 }
 table {
  padding: 0;
@@ -153,7 +154,7 @@ table {
  margin: 0 auto;
 }
 .img-wrapper {
- margin: 0 3%;
+ margin: 0 15%;
 }
 img {
  display: block;

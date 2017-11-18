@@ -9,6 +9,7 @@
   color: @text_color;
   margin: auto 20%;
   text-align: justify;
+  font-family: Consolas, Menlo, Courier, monospace;
 }
 
 p, ul, ol, blockquote, q, pre, code {
@@ -20,23 +21,23 @@ p {
 }
 
 strong, b{
-  color: @accent_color;
+  color: @theme_color;
 }
 
 em, i {
-  color: @accent_color;
+  color: @theme_color;
 }
 
 h1, h2 {
   font-weight: bold !important;
-  color: @accent_color !important;
+  color: @theme_color !important;
   margin: @para_spacing @main_margin !important;
   text-align: left !important;
 }
 
 h3, h4, h5, h6 {
   font-weight: bold !important;
-  color: @accent_color !important;
+  color: @theme_color !important;
   margin: @para_spacing @main_margin !important;
   text-align: @title_align !important;
 }
@@ -68,7 +69,7 @@ h6 {
 }
 
 hr {
-  border-top: 2px solid @accent_color;
+  border-top: 2px solid @theme_color;
   margin: @para_spacing * 2 @main_margin;
 }
 
@@ -201,8 +202,8 @@ table tr th, table tr td {
 table tr th {
   font-weight: bold;
   color: #eee;
-  border: 1px solid @accent_color;
-  background-color: @accent_color;
+  border: 1px solid @theme_color;
+  background-color: @theme_color;
 }
 
 dl {
@@ -221,7 +222,7 @@ dl dd {
 }
 
 a {
-  color: @accent_color;
+  color: @theme_color;
   text-decoration: none;
 }
 
