@@ -3,6 +3,7 @@
 .DS_Store
 __pycache__/
 .idea
+/bin
 build/
 dist/
 *.spec
