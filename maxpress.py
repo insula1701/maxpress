@@ -43,7 +43,7 @@ def md2html(text, styles=None, poster=''):
 
 def pack_html(html, styles=None, poster=''):
     if not styles: styles = [join_path(ROOT, 'css','default.css')]
-    styles.append(join_path('css','custom.css'))
+    styles.append(join_path(ROOT, 'css','custom.css'))
     style_tags = ['<link rel="stylesheet" type="text/css" href="{}">'.format(sheet)
          for sheet in styles]
 
