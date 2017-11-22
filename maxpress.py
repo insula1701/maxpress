@@ -16,8 +16,11 @@ def import_config(file=join_path(ROOT, 'config.json')):
     config = json.loads(json_text)
     cfg_lines = ['@{}: {};\n'.format(key, value)
                  for key, value in config.items() if not key == 'poster_url']
-    with open(join_path(ROOT, 'less', 'vars.less'), 'w', encoding='utf-8') as less_file:
-        less_file.writelines(cfg_lines)
+    variables = '\n'.join(cfg_lines) + '\n\n'
+    with open(join_path(ROOT, 'less', 'styles.less'), encoding='utf-8') as styles_file:
+        styles = styles_file.read()
+    with open(join_path(ROOT, 'less', 'default.less'), 'w', encoding='utf-8') as default_less:
+        default_less.write(variables + styles)
     return config
 
 
