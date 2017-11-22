@@ -13,7 +13,7 @@ blockquote,
 q,
 pre,
 code {
- line-height: 2em;
+ line-height: 1.8em;
 }
 p {
  margin: 1.5em 3% !important;
@@ -121,7 +121,7 @@ code {
  color: #999999;
 }
 pre {
- line-height: 1.9em;
+ line-height: 1.7em;
  display: block !important;
  background-color: white;
 }

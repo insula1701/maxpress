@@ -1,30 +1,33 @@
 from mistune import Markdown
 from six import StringIO
 import premailer, lesscpy
-import os, re, json
+import sys, os, re, json
 from os.path import join as join_path
 
 
+ROOT = os.path.dirname(sys.argv[0])
+
+
 # 处理配置文件
-def import_config(file='config.json'):
+def import_config(file=join_path(ROOT, 'config.json')):
     with open(file, encoding='utf-8') as json_file:
         text = json_file.read()
         json_text = re.search(r'\{[\s\S]*\}', text).group()  # 去除json文件中的注释
     config = json.loads(json_text)
     cfg_lines = ['@{}: {};\n'.format(key, value)
                  for key, value in config.items() if not key == 'poster_url']
-    with open(join_path('less', 'vars.less'), 'w', encoding='utf-8') as less_file:
+    with open(join_path(ROOT, 'less', 'vars.less'), 'w', encoding='utf-8') as less_file:
         less_file.writelines(cfg_lines)
     return config
 
 
 # 解析less文件，生成默认样式表
-def compile_styles(file=join_path('less', 'default.less')):
+def compile_styles(file=join_path(ROOT, 'less', 'default.less')):
     with open(file, encoding='utf-8') as raw_file:
         raw_text = raw_file.read()
 
     css = lesscpy.compile(StringIO(raw_text))
-    with open(join_path('css', 'default.css'), 'w', encoding='utf-8') as css_file:
+    with open(join_path(ROOT, 'css', 'default.css'), 'w', encoding='utf-8') as css_file:
         css_file.write(css)
 
 
@@ -36,8 +39,8 @@ def md2html(text, styles=None, poster=''):
     return result
 
 def pack_html(html, styles=None, poster=''):
-    if not styles: styles = [join_path('css/','default.css')]
-    styles.append(join_path('css/','custom.css'))
+    if not styles: styles = [join_path(ROOT, 'css','default.css')]
+    styles.append(join_path('css','custom.css'))
     style_tags = ['<link rel="stylesheet" type="text/css" href="{}">'.format(sheet)
          for sheet in styles]
 
@@ -83,15 +86,15 @@ def report_error(func):
             return result
         except Exception as e:
             print('错误: {}'.format(e))
-            input('提示：运行前请将所有要转换的Markdown文档放入workspace/md目录中\n'
+            input('提示：运行前请将所有要转换的Markdown文档放入temp目录中\n'
                   '请按回车键退出程序：')
 
     return wrapper
 
 
-# 转换md目录（不包括嵌套目录）下的所有md文档
+# 转换temp下的所有md文档
 @report_error
-def convert_all(src=join_path('workspace', 'md'), dst=join_path('workspace', 'html'),
+def convert_all(src=join_path(ROOT, 'temp'), dst=join_path(ROOT, 'result', 'html'),
                 archive=True, styles=None):  # 通过styles参数传入css文件名列表时，默认样式将失效
 
     print('正在导入配置文件...', end=' ')
@@ -119,7 +122,7 @@ def convert_all(src=join_path('workspace', 'md'), dst=join_path('workspace', 'ht
 
             if archive:
                 print('正在存档{}...'.format(file), end=' ')
-                arch_dir = join_path('workspace', 'archive')
+                arch_dir = join_path(ROOT, 'result', 'archive')
                 if not os.path.exists(arch_dir): os.mkdir(arch_dir)
                 filepath, default_archpath = join_path(src, file), join_path(arch_dir, file)
                 count = 0
@@ -132,8 +135,8 @@ def convert_all(src=join_path('workspace', 'md'), dst=join_path('workspace', 'ht
                         count +=1; pass
                 print('存档成功!')
 
-    print('\n请进入workspace／html查看所有生成的HTML文档')
-    print('请进入workspace／archive查看所有存档的Markdown文档')
+    print('\n请进入result／html查看所有生成的HTML文档')
+    print('请进入result／archive查看所有存档的Markdown文档')
 
 
 if __name__ == '__main__':
