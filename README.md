@@ -10,14 +10,14 @@
 
 ### 下载
 
-[v0.1.0：Windows版/Python源码](https://github.com/insula1701/maxpress/releases)
+[下载最新稳定版本：Windows版/Mac版/Python源码](https://github.com/insula1701/maxpress/releases)
 
-### 使用Windows版
+### 使用Windows/Mac版可执行程序
 
 #### 一键排版
 
 1. 使用Markdown创作你的内容，保存为`.md`文件，放入`temp`目录中。（可以添加多个`.md`文件，支持批量转换）
-2. 运行`maxpress.exe`，`result／html`目录下将生成同名`.html`文件；同时原始`.md`的文件将被移动到`result／archive`目录中存档。
+2. 运行`maxpress`程序，`result／html`目录下将生成同名`.html`文件；同时原始`.md`的文件将被移动到`result／archive`目录中存档。
 3. 用浏览器打开生成的`.html`文件，全选复制，粘贴到微信编辑器中。（目前只测试了Win/Mac上的Chrome浏览器，如果这一步出现格式丢失/错乱等情况，请在issue中反馈，说明你遇到的问题、使用的系统和浏览器）
 4. 检查，预览，调整。
 
