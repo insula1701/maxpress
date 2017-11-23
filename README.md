@@ -51,9 +51,9 @@
 [`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) ->
  [`example.html`](https://github.com/insula1701/maxpress/blob/master/temp/example.html)
 
-### 使用Python脚本
+### 使用Python脚本【推荐】
 
-如果你的计算机上装有Python环境，可以直接运行脚本。
+如果你的计算机上装有Python环境，可以直接运行脚本。（建议Master分支）
 
 #### 开发环境
 
