@@ -136,7 +136,8 @@ def convert_all(src=join_path(ROOT, 'temp'),
             with open(filepath, encoding='utf-8') as md_file:
                 text = md_file.read()
             result = md2html(text, styles, poster=config['poster_url'])
-            htmlpath = autoname(join_path(dst, file[:-3] + '.html'))
+            htmlpath = join_path(dst, file[:-3] + '.html')
+            if config['auto_rename']: htmlpath = autoname(htmlpath)
             with open(htmlpath,'w', encoding='utf-8') as html_file:
                 html_file.write(result)
             print('转换成功[{}]'.format(htmlpath.split('/')[-1]))
@@ -145,7 +146,8 @@ def convert_all(src=join_path(ROOT, 'temp'),
                 print('[+] 正在存档{}...'.format(file), end=' ')
                 arch_dir = join_path(ROOT, 'result', 'archive')
                 if not os.path.exists(arch_dir): os.mkdir(arch_dir)
-                archpath = autoname(join_path(arch_dir, file))
+                archpath = join_path(arch_dir, file)
+                if config['auto_rename']: archpath = autoname(archpath)
                 os.rename(filepath, archpath)
                 print('存档成功[{}]'.format(archpath.split('/')[-1]))
 

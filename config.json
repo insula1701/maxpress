@@ -1,6 +1,6 @@
 /* 本部分json注释在导入时将自动进行过滤处理
 
-自定义基本格式参数：
+自定义基本参数：
   main_size: 正文主字号
   main_margin: 内容两侧留白比例
   line_height: 正文行高
@@ -10,6 +10,7 @@
   theme_color: 主题色，用于标题、强调元素等文字颜色
   quote_color: 引用框和代码框内文字颜色
   poster: 文章底部图片的url，通常是二维码或宣传海报，如"http://placeholder.qiniudn.com/900x600"
+  auto_rename: 如何处理冲突的文件名，true - 自动重命名；false - 覆盖先前的文件
 */
 
 {
@@ -21,6 +22,6 @@
   "text_color": "#555",
   "theme_color": "#3fa944",
   "quote_color": "#999",
-  "poster_url": ""
-
+  "poster_url": "",
+  "auto_rename": false
 }
