@@ -94,52 +94,63 @@ def report_error(func):
 
     return wrapper
 
+# 用于处理嵌套目录
+def recursive_listdir(dir):
+    for root, subdirs, files in os.walk(dir):
+        for file in files:
+            yield (file, join_path(root, file))
+
+# 用于处理冲突的文件名
+def autoname(defaultpath):
+    ext = re.search(r'\..+?$', defaultpath).group()
+    count = 0
+    while count < 10000:
+        suffix = '(%d)' % count if count > 0 else ''
+        newpath = defaultpath[:0 - len(ext)] + suffix + ext
+        if not os.path.exists(newpath):
+            return newpath
+        else:
+            count += 1; pass
+
 
 # 转换temp下的所有md文档
 @report_error
-def convert_all(src=join_path(ROOT, 'temp'), dst=join_path(ROOT, 'result', 'html'),
+def convert_all(src=join_path(ROOT, 'temp'),
+                dst=join_path(ROOT, 'result', 'html'),
                 archive=True, styles=None):  # 通过styles参数传入css文件名列表时，默认样式将失效
 
-    print('正在导入配置文件...', end=' ')
+    print('[+] 正在导入配置文件...', end=' ')
     config = import_config()
-    print('导入成功!')
+    print('导入成功')
 
     if not styles:
-        print('正在编译CSS样式表...', end=' ')
+        print('[+] 正在编译CSS样式表...', end=' ')
         compile_styles()
-        print('编译成功!')
+        print('编译成功')
     elif isinstance(styles, str): styles = [styles]
 
-    for file in os.listdir(src):
+    for file, filepath in recursive_listdir(src):
 
         if file.endswith('.md'):
-            print('正在转换{}...'.format(file), end=' ')
-            with open(join_path(src, file), encoding='utf-8') as md_file:
+            print('[+] 正在转换{}...'.format(file), end=' ')
+            with open(filepath, encoding='utf-8') as md_file:
                 text = md_file.read()
             result = md2html(text, styles, poster=config['poster_url'])
-
-            with open(join_path(dst, file[:-3] + '.html'),
-                      'w', encoding='utf-8') as html_file:
+            htmlpath = autoname(join_path(dst, file[:-3] + '.html'))
+            with open(htmlpath,'w', encoding='utf-8') as html_file:
                 html_file.write(result)
-            print('转换成功！')
+            print('转换成功[{}]'.format(htmlpath.split('/')[-1]))
 
             if archive:
-                print('正在存档{}...'.format(file), end=' ')
+                print('[+] 正在存档{}...'.format(file), end=' ')
                 arch_dir = join_path(ROOT, 'result', 'archive')
                 if not os.path.exists(arch_dir): os.mkdir(arch_dir)
-                filepath, default_archpath = join_path(src, file), join_path(arch_dir, file)
-                count = 0
-                while True:
-                    try:
-                        suffix = '(%d)' % count if count > 0 else ''
-                        archpath = default_archpath[:-3] + suffix + '.md'
-                        os.rename(filepath, archpath); break
-                    except FileExistsError:
-                        count +=1; pass
-                print('存档成功!')
+                archpath = autoname(join_path(arch_dir, file))
+                os.rename(filepath, archpath)
+                print('存档成功[{}]'.format(archpath.split('/')[-1]))
 
-    print('\n请进入result／html查看所有生成的HTML文档')
-    print('请进入result／archive查看所有存档的Markdown文档')
+    print('\n[+] 请进入result／html查看所有生成的HTML文档')
+    print('[+] 请进入result／archive查看所有存档的Markdown文档')
 
 
 if __name__ == '__main__':
