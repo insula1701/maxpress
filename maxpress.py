@@ -14,8 +14,9 @@ def import_config(file=join_path(ROOT, 'config.json')):
         text = json_file.read()
         json_text = re.search(r'\{[\s\S]*\}', text).group()  # 去除json文件中的注释
     config = json.loads(json_text)
+    non_style_keys = ['poster_url', 'auto_rename']
     cfg_lines = ['@{}: {};\n'.format(key, value)
-                 for key, value in config.items() if not key == 'poster_url']
+                 for key, value in config.items() if not key in non_style_keys]
     variables = '\n'.join(cfg_lines) + '\n\n'
     with open(join_path(ROOT, 'less', 'styles.less'), encoding='utf-8') as styles_file:
         styles = styles_file.read()
