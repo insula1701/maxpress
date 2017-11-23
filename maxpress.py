@@ -150,7 +150,7 @@ def convert_all(src=join_path(ROOT, 'temp'),
                 print('存档成功[{}]'.format(archpath.split('/')[-1]))
 
     print('\n[+] 请进入result／html查看所有生成的HTML文档')
-    print('[+] 请进入result／archive查看所有存档的Markdown文档')
+    print('[+] 请进入result／archive查看所有存档的MarkDown文档')
 
 
 if __name__ == '__main__':
