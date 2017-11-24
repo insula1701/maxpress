@@ -23,5 +23,6 @@
   "theme_color": "#3fa944",
   "quote_color": "#999",
   "poster_url": "",
+  "auto_archive": true,
   "auto_rename": false
 }

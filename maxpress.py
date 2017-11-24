@@ -1,7 +1,7 @@
 from mistune import Markdown
 from six import StringIO
 import premailer, lesscpy
-import sys, os, re, json
+import sys, os, re, json, shutil
 from os.path import join as join_path
 
 
@@ -14,7 +14,7 @@ def import_config(file=join_path(ROOT, 'config.json')):
         text = json_file.read()
         json_text = re.search(r'\{[\s\S]*\}', text).group()  # 去除json文件中的注释
     config = json.loads(json_text)
-    non_style_keys = ['poster_url', 'auto_rename']
+    non_style_keys = ['poster_url', 'uto_archivea', 'auto_rename']
     cfg_lines = ['@{}: {};\n'.format(key, value)
                  for key, value in config.items() if not key in non_style_keys]
     variables = '\n'.join(cfg_lines) + '\n\n'
@@ -118,10 +118,11 @@ def autoname(defaultpath):
 @report_error
 def convert_all(src=join_path(ROOT, 'temp'),
                 dst=join_path(ROOT, 'result', 'html'),
-                archive=True, styles=None):  # 通过styles参数传入css文件名列表时，默认样式将失效
+                archive=None, styles=None):  # 通过styles参数传入css文件名列表时，默认样式将失效
 
     print('[+] 正在导入配置文件...', end=' ')
     config = import_config()
+    if archive is None: archive = config['auto_archive']
     print('导入成功')
 
     if not styles:
@@ -152,6 +153,7 @@ def convert_all(src=join_path(ROOT, 'temp'),
                 os.rename(filepath, archpath)
                 print('存档成功[{}]'.format(archpath.split('/')[-1]))
 
+    if archive: shutil.rmtree(src); os.mkdir(src)
     print('\n[+] 请进入result／html查看所有生成的HTML文档')
     print('[+] 请进入result／archive查看所有存档的MarkDown文档')
 
