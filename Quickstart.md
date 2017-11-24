@@ -34,6 +34,5 @@
 
 ## 示例
 
-[`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) ->
- [`example.html`](https://github.com/insula1701/maxpress/blob/master/temp/example.html)
-xample.html`](https://github.com/insula1701/maxpress/blob/master/workspace/html) （html请下载后在浏览器中打开）
+[`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) -> 
+[`example.html`](https://github.com/insula1701/maxpress/blob/master/result/html) （html请下载后在浏览器中打开）
