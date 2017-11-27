@@ -13,7 +13,7 @@ table tr:nth-child(2n) {background-color:#f8f8f8}</style>
           <div class="wrapper" style="color:#555; font-family:Consolas, Menlo, monospace; font-size:16px; letter-spacing:0.1em; margin:auto 20%; text-align:justify" align="justify">
 <p style="line-height:1.8em; margin:1.5em 3%">本文档中包括了Markdown的常用语法示例及说明。
 你可以将本文档由.md转换为.html，并粘贴到微信编辑器中测试显示效果。</p>
-<hr style="border-top:2px solid #3fa944; margin:3em 3%">
+<hr style="border-top:2px solid #2298a5; margin:3em 3%">
 <p style="line-height:1.8em; margin:1.5em 3%">Mardown是一种简洁高效的轻量级标记语言。
 使用Markdown写作，意味着你只需要在写作过程中加入少量的简单符号标记（<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">*</code>，<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">#</code>，<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">-</code>等），后续就可以轻松生成结构良好的HTML版本，节省大量排版时间。</p>
 <p style="line-height:1.8em; margin:1.5em 3%">Markdown文件通常使用<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">.md</code>作为扩展名。
@@ -21,23 +21,23 @@ table tr:nth-child(2n) {background-color:#f8f8f8}</style>
 让你在写作的同时看到生成HTML的格式。
 但你也可以使用普通的文本编辑器编辑Markdown文档，
 甚至以<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">.txt</code>为扩展名进行保存，这都不会造成影响。</p>
-<p style="line-height:1.8em; margin:1.5em 3%">需要注意的是：Markdown中的标记符号都是<strong style="color:#3fa944">英文标点</strong>
+<p style="line-height:1.8em; margin:1.5em 3%">需要注意的是：Markdown中的标记符号都是<strong style="color:#2298a5">英文标点</strong>
 （有一些可以在中文输入法中输入，但有一些必须先切换成英文输入法才能正确输入）。
 如果你需要在正文中使用这些符号，可以在符号前额外插入<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">\</code>，
 以避免它被自动识别为Markdown标记。</p>
 <p style="line-height:1.8em; margin:1.5em 3%">下面简要介绍一些在文章排版中最常用的Markdown语法，
-更多内容请参阅<a href="https://markdown-zh.readthedocs.io/en/latest/" style="color:#3fa944; text-decoration:none">Markdown官方文档</a>。</p>
-<h2 style="color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">第1部分：正文排版</h2>
-<h3 style="font-size:18px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">一般规则</h3>
+更多内容请参阅<a href="https://markdown-zh.readthedocs.io/en/latest/" style="color:#2298a5; text-decoration:none">Markdown官方文档</a>。</p>
+<h2 style="color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">第1部分：正文排版</h2>
+<h3 style="font-size:18px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">一般规则</h3>
 <p style="line-height:1.8em; margin:1.5em 3%">正文段落与段落之间需要空出一行（连按两次Enter），
 这样才会在html中生成两个p标签标记的段落。</p>
-<p style="line-height:1.8em; margin:1.5em 3%"><strong style="color:#3fa944">注意：</strong></p>
+<p style="line-height:1.8em; margin:1.5em 3%"><strong style="color:#2298a5">注意：</strong></p>
 <ul style="line-height:1.8em; margin:1.5em 3%; font-size:16px; padding-left:1.5em; list-style-type:circle">
 <li style="color:#555556; font-size:15px; margin:0.75em 0"><span style="color:#555557; font-size:14px; margin:0.75em 0">如果只按1次<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">Enter</code>换行，在排版结果中不会换行。</span></li>
 <li style="color:#555556; font-size:15px; margin:0.75em 0"><span style="color:#555557; font-size:14px; margin:0.75em 0">如果必须要实现相当于<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">&lt;br&gt;</code>标签的段落内换行效果（这种情况很少），
 要先插入2个以上空格再按<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">Enter</code>(或者你可以直接使用<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">&lt;br&gt;</code>，Markdown本身支持HTML)。</span></li>
 </ul>
-<h3 style="font-size:18px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">突出强调</h3>
+<h3 style="font-size:18px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">突出强调</h3>
 <p style="line-height:1.8em; margin:1.5em 3%">支持使用斜体、粗体、粗斜体强调部分文字，
 只需在需要强调的文字前后分别插入
 1个（斜体）、2个（粗体）、3个（粗斜体）<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">*</code>符号。</p>
@@ -47,12 +47,12 @@ table tr:nth-child(2n) {background-color:#f8f8f8}</style>
 ***粗斜体***
 </code></pre>
 <p style="line-height:1.8em; margin:1.5em 3%">其显示效果为：</p>
-<p style="line-height:1.8em; margin:1.5em 3%"><em style="color:#3fa944">斜体</em>
-<strong style="color:#3fa944">粗体</strong>
-<strong style="color:#3fa944"><em style="color:#3fa944">粗斜体</em></strong></p>
-<h3 style="font-size:18px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">使用列表</h3>
+<p style="line-height:1.8em; margin:1.5em 3%"><em style="color:#2298a5">斜体</em>
+<strong style="color:#2298a5">粗体</strong>
+<strong style="color:#2298a5"><em style="color:#2298a5">粗斜体</em></strong></p>
+<h3 style="font-size:18px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">使用列表</h3>
 <p style="line-height:1.8em; margin:1.5em 3%">在HTML中列表分为无序列表和有序列表。</p>
-<h4 style="font-size:16px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">无序列表</h4>
+<h4 style="font-size:16px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">无序列表</h4>
 <p style="line-height:1.8em; margin:1.5em 3%">在列表每一条目开头处插入一个<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">-</code>或<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">*</code>或<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">+</code>
 （任选一种即可，个人习惯统一使用<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">-</code>），以及紧跟的一个空格（不能省略，可以用<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">TAB</code>代替）。</p>
 <p style="line-height:1.8em; margin:1.5em 3%">以下写法示例：</p>
@@ -66,7 +66,7 @@ table tr:nth-child(2n) {background-color:#f8f8f8}</style>
 <li style="color:#555556; font-size:15px; margin:0.75em 0"><span style="color:#555557; font-size:14px; margin:0.75em 0">这是一个无序列表</span></li>
 <li style="color:#555556; font-size:15px; margin:0.75em 0"><span style="color:#555557; font-size:14px; margin:0.75em 0">这是一个无序列表</span></li>
 </ul>
-<h4 style="font-size:16px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">有序列表</h4>
+<h4 style="font-size:16px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">有序列表</h4>
 <p style="line-height:1.8em; margin:1.5em 3%">如果需要对列表加上序号，则可以在每一条目开头处连续插入数字、<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">.</code>符号、空格。</p>
 <p style="line-height:1.8em; margin:1.5em 3%">以下写法示例：</p>
 <pre style="line-height:1.7em; color:#999; background-color:white; font-size:14px; display:block" bgcolor="white"><code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:block; padding:3px; white-space:pre; overflow:auto; font-size:14px; margin:auto 3%">1. 第一条论据
@@ -79,7 +79,7 @@ table tr:nth-child(2n) {background-color:#f8f8f8}</style>
 <li style="color:#555556; font-size:15px; margin:0.75em 0"><span style="color:#555557; font-size:14px; margin:0.75em 0">第二条论据</span></li>
 <li style="color:#555556; font-size:15px; margin:0.75em 0"><span style="color:#555557; font-size:14px; margin:0.75em 0">第三条论据</span></li>
 </ol>
-<p style="line-height:1.8em; margin:1.5em 3%"><strong style="color:#3fa944">注意</strong>：开头插入的数字到底是多少并不重要，HTML中显示的列表永远是顺序编号的，
+<p style="line-height:1.8em; margin:1.5em 3%"><strong style="color:#2298a5">注意</strong>：开头插入的数字到底是多少并不重要，HTML中显示的列表永远是顺序编号的，
 以下这些写法：</p>
 <pre style="line-height:1.7em; color:#999; background-color:white; font-size:14px; display:block" bgcolor="white"><code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:block; padding:3px; white-space:pre; overflow:auto; font-size:14px; margin:auto 3%">1. 第一条论据
 1. 第二条论据
@@ -92,7 +92,7 @@ table tr:nth-child(2n) {background-color:#f8f8f8}</style>
 </code></pre>
 <p style="line-height:1.8em; margin:1.5em 3%">最终显示效果与上面的第一种完全相同，但为了明晰起见，建议还是使用顺序编号。</p>
 <p style="line-height:1.8em; margin:1.5em 3%">如果需要在段落开头显示不加转换的<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">200.</code>这类格式，请写成<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">200\.</code></p>
-<h3 style="font-size:18px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">进行引用</h3>
+<h3 style="font-size:18px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">进行引用</h3>
 <p style="line-height:1.8em; margin:1.5em 3%">在引用的段落开头处插入<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">&gt;</code>进行标记。（实际应用中可以使用这个效果标记文章导语，虽然从语义的角度这种做法不是最优的）</p>
 <p style="line-height:1.8em; margin:1.5em 3%">如果需要在同一个引用块内插入多个段落，段落之间需要用空行间隔，
 然后在每一段开头都插入<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">&gt;</code>。</p>
@@ -106,7 +106,7 @@ table tr:nth-child(2n) {background-color:#f8f8f8}</style>
 <p style="line-height:1.8em; margin:1.5em 3%">引用的第一段。</p>
 <p style="line-height:1.8em; margin:1.5em 3%">引用的第二段。</p>
 </blockquote>
-<h3 style="font-size:18px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">使用分割线</h3>
+<h3 style="font-size:18px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">使用分割线</h3>
 <p style="line-height:1.8em; margin:1.5em 3%">在单独一行上连续插入三个以上<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">-</code>或<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">*</code>或<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">_</code>。</p>
 <p style="line-height:1.8em; margin:1.5em 3%">以下写法示例：</p>
 <pre style="line-height:1.7em; color:#999; background-color:white; font-size:14px; display:block" bgcolor="white"><code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:block; padding:3px; white-space:pre; overflow:auto; font-size:14px; margin:auto 3%">--------
@@ -114,10 +114,10 @@ table tr:nth-child(2n) {background-color:#f8f8f8}</style>
 ________
 </code></pre>
 <p style="line-height:1.8em; margin:1.5em 3%">其显示效果为：</p>
-<hr style="border-top:2px solid #3fa944; margin:3em 3%">
-<hr style="border-top:2px solid #3fa944; margin:3em 3%">
-<hr style="border-top:2px solid #3fa944; margin:3em 3%">
-<h2 style="color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">第2部分：标题排版</h2>
+<hr style="border-top:2px solid #2298a5; margin:3em 3%">
+<hr style="border-top:2px solid #2298a5; margin:3em 3%">
+<hr style="border-top:2px solid #2298a5; margin:3em 3%">
+<h2 style="color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">第2部分：标题排版</h2>
 <p style="line-height:1.8em; margin:1.5em 3%">HTML将标题（Heading）分为<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">&lt;h1&gt;</code>-<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">&lt;h6&gt;</code>六个级别。</p>
 <p style="line-height:1.8em; margin:1.5em 3%">其中<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">&lt;h1&gt;</code>代表最大的标题，<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">&lt;h6&gt;</code>代表最小的标题。</p>
 <p style="line-height:1.8em; margin:1.5em 3%">要对标题进行标记，需要在文字前插入不同数量的<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">#</code>符号,
@@ -131,23 +131,23 @@ ________
 ###### h6:如何使用Markdown进行排版
 </code></pre>
 <p style="line-height:1.8em; margin:1.5em 3%">其显示效果为：</p>
-<h1 style="color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #ddd; font-size:24px" align="left">h1:如何使用Markdown进行排版</h1>
-<h2 style="color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">h2:如何使用Markdown进行排版</h2>
-<h3 style="font-size:18px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">h3:如何使用Markdown进行排版</h3>
-<h3 style="font-size:18px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">h3:如何使用Markdown进行排版</h3>
-<h4 style="font-size:16px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">h4:如何使用Markdown进行排版</h4>
-<h5 style="font-size:14px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">h5:如何使用Markdown进行排版</h5>
-<h6 style="font-size:12px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">h6:如何使用Markdown进行排版</h6>
+<h1 style="color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #ddd; font-size:24px" align="left">h1:如何使用Markdown进行排版</h1>
+<h2 style="color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">h2:如何使用Markdown进行排版</h2>
+<h3 style="font-size:18px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">h3:如何使用Markdown进行排版</h3>
+<h3 style="font-size:18px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">h3:如何使用Markdown进行排版</h3>
+<h4 style="font-size:16px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">h4:如何使用Markdown进行排版</h4>
+<h5 style="font-size:14px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">h5:如何使用Markdown进行排版</h5>
+<h6 style="font-size:12px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">h6:如何使用Markdown进行排版</h6>
 <p style="line-height:1.8em; margin:1.5em 3%">通常一个页面上只有一个h1，即文章的主标题；h2-h6则可以出现多次。正文小标题一般从h2或h3使用。</p>
-<h2 style="color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">第3部分：其他应用</h2>
-<h3 style="font-size:18px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">删除线</h3>
+<h2 style="color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">第3部分：其他应用</h2>
+<h3 style="font-size:18px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">删除线</h3>
 <p style="line-height:1.8em; margin:1.5em 3%">在需要用删除线标记的文字前后分别插入<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">~~</code>，效果：<del>要划出的文字</del></p>
 <p style="line-height:1.8em; margin:1.5em 3%">以下写法示例：</p>
 <pre style="line-height:1.7em; color:#999; background-color:white; font-size:14px; display:block" bgcolor="white"><code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:block; padding:3px; white-space:pre; overflow:auto; font-size:14px; margin:auto 3%">~~要划除的文字~~
 </code></pre>
 <p style="line-height:1.8em; margin:1.5em 3%">其显示效果为：</p>
 <p style="line-height:1.8em; margin:1.5em 3%"><del>要划除的文字</del></p>
-<h3 style="font-size:18px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">插入代码</h3>
+<h3 style="font-size:18px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">插入代码</h3>
 <p style="line-height:1.8em; margin:1.5em 3%">可以使用代码块插入特殊的符号或语句（如不希望转义的Markdown或HTML）。</p>
 <ul style="line-height:1.8em; margin:1.5em 3%; font-size:16px; padding-left:1.5em; list-style-type:circle">
 <li style="color:#555556; font-size:15px; margin:0.75em 0"><span style="color:#555557; font-size:14px; margin:0.75em 0">在行内插入代码：在代码前后分别插入<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">`</code>符号（反引号，需要在英文模式下输入）；</span></li>
@@ -172,7 +172,7 @@ ________
 
 print("Hello, %s！" % your_name)
 </code></pre>
-<h3 style="font-size:18px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">图片</h3>
+<h3 style="font-size:18px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">图片</h3>
 <p style="line-height:1.8em; margin:1.5em 3%">Markdown引用图片的基本方式为：</p>
 <pre style="line-height:1.7em; color:#999; background-color:white; font-size:14px; display:block" bgcolor="white"><code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:block; padding:3px; white-space:pre; overflow:auto; font-size:14px; margin:auto 3%">![alt替代文本](图片url)
 </code></pre>
@@ -195,14 +195,14 @@ print("Hello, %s！" % your_name)
 [id]: http://placeholder.qiniudn.com/900x600
 </code></pre>
 <p style="line-height:1.8em; margin:1.5em 3%">id是一个标识，可以使用任意文本。这种方式更加方便在需要时根据不同发布平台替换图片地址。</p>
-<h3 style="font-size:18px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">超链接</h3>
-<p style="line-height:1.8em; margin:1.5em 3%"><strong style="color:#3fa944">注意：</strong>微信公众号不支持发送超链接，即使你将带超链接的文本插入了编辑器中，发送到手机后所有的格式都会丢失。</p>
+<h3 style="font-size:18px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">超链接</h3>
+<p style="line-height:1.8em; margin:1.5em 3%"><strong style="color:#2298a5">注意：</strong>微信公众号不支持发送超链接，即使你将带超链接的文本插入了编辑器中，发送到手机后所有的格式都会丢失。</p>
 <p style="line-height:1.8em; margin:1.5em 3%">Markdown有多种引用链接的方式，下面这种比较简单：</p>
 <pre style="line-height:1.7em; color:#999; background-color:white; font-size:14px; display:block" bgcolor="white"><code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:block; padding:3px; white-space:pre; overflow:auto; font-size:14px; margin:auto 3%">[链接文本](http://example.net/)
 </code></pre>
 <p style="line-height:1.8em; margin:1.5em 3%">显示效果（须在网页浏览器中查看，微信不支持）：</p>
-<p style="line-height:1.8em; margin:1.5em 3%"><a href="http://example.net/" style="color:#3fa944; text-decoration:none">链接文本</a></p>
-<h3 style="font-size:18px; color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">表格</h3>
+<p style="line-height:1.8em; margin:1.5em 3%"><a href="http://example.net/" style="color:#2298a5; text-decoration:none">链接文本</a></p>
+<h3 style="font-size:18px; color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:center" align="center">表格</h3>
 <p style="line-height:1.8em; margin:1.5em 3%">由于手机屏幕较小，难以控制表格的版式，不建议在移动端使用表格。</p>
 <p style="line-height:1.8em; margin:1.5em 3%">以下是一个Markdown的写法示例（第二行每列有几个<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">-</code>和空格并不重要）：</p>
 <pre style="line-height:1.7em; color:#999; background-color:white; font-size:14px; display:block" bgcolor="white"><code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:block; padding:3px; white-space:pre; overflow:auto; font-size:14px; margin:auto 3%">| 左对齐  | 居中对齐 | 右对齐 |
@@ -214,9 +214,9 @@ print("Hello, %s！" % your_name)
 <section class="tbl-wrapper" style="margin:0 3%"><table style="margin:0 auto; border:0; border-collapse:collapse; border-spacing:0; font:inherit; font-size:1em; padding:0">
 <thead>
 <tr style="background-color:white; border:0; border-top:1px solid #ccc; margin:0; padding:0" bgcolor="white">
-<th style="border:1px solid #3fa944; font-size:14px; margin:0; padding:5px 10px; background-color:#3fa944; color:#eee; font-weight:bold; text-align:left" bgcolor="#3fa944" align="left">左对齐</th>
-<th style="border:1px solid #3fa944; font-size:14px; margin:0; padding:5px 10px; background-color:#3fa944; color:#eee; font-weight:bold; text-align:center" bgcolor="#3fa944" align="center">居中对齐</th>
-<th style="border:1px solid #3fa944; font-size:14px; margin:0; padding:5px 10px; background-color:#3fa944; color:#eee; font-weight:bold; text-align:right" bgcolor="#3fa944" align="right">右对齐</th>
+<th style="border:1px solid #2298a5; font-size:14px; margin:0; padding:5px 10px; background-color:#2298a5; color:#eee; font-weight:bold; text-align:left" bgcolor="#2298a5" align="left">左对齐</th>
+<th style="border:1px solid #2298a5; font-size:14px; margin:0; padding:5px 10px; background-color:#2298a5; color:#eee; font-weight:bold; text-align:center" bgcolor="#2298a5" align="center">居中对齐</th>
+<th style="border:1px solid #2298a5; font-size:14px; margin:0; padding:5px 10px; background-color:#2298a5; color:#eee; font-weight:bold; text-align:right" bgcolor="#2298a5" align="right">右对齐</th>
 </tr>
 </thead>
 <tbody style="border:0; margin:0; padding:0">
@@ -232,39 +232,39 @@ print("Hello, %s！" % your_name)
 </tr>
 </tbody>
 </table></section>
-<h2 style="color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">第4部分：文章排版示例</h2>
-<hr style="border-top:2px solid #3fa944; margin:3em 3%">
+<h2 style="color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">第4部分：文章排版示例</h2>
+<hr style="border-top:2px solid #2298a5; margin:3em 3%">
 <blockquote style="line-height:1.8em; margin:auto 3%; border:2px dotted #ddd; border-radius:0.7em; color:#999; padding:0 10px; quotes:none">
 <p style="line-height:1.8em; margin:1.5em 3%">人生苦短，这九条实用技巧告诉你：如何利用搜索引擎高效解决问题。</p>
 </blockquote>
-<h2 style="color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">1. 使用Google搜索</h2>
+<h2 style="color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">1. 使用Google搜索</h2>
 <p style="line-height:1.8em; margin:1.5em 3%">也许你认为这不算一条技巧，不过这却是我能想到的最有用的一条建议了，所以本文以下内容都是基于Google的。</p>
 <p style="line-height:1.8em; margin:1.5em 3%">简言之：</p>
-<p style="line-height:1.8em; margin:1.5em 3%"><strong style="color:#3fa944">时间 = 生命</strong></p>
-<p style="line-height:1.8em; margin:1.5em 3%"><strong style="color:#3fa944">信息 = 财富</strong></p>
+<p style="line-height:1.8em; margin:1.5em 3%"><strong style="color:#2298a5">时间 = 生命</strong></p>
+<p style="line-height:1.8em; margin:1.5em 3%"><strong style="color:#2298a5">信息 = 财富</strong></p>
 <p style="line-height:1.8em; margin:1.5em 3%">想付出最少的时间，获得最精准的信息，用Google。</p>
 <p style="line-height:1.8em; margin:1.5em 3%">当然了，国内环境下，以下2种情况请安心使用百度：</p>
 <ol style="line-height:1.8em; margin:1.5em 3%; font-size:16px; padding-left:1.5em">
 <li style="color:#555556; font-size:15px; margin:0.75em 0"><span style="color:#555557; font-size:14px; margin:0.75em 0">做国内用户SEO的时候；</span></li>
 <li style="color:#555556; font-size:15px; margin:0.75em 0"><span style="color:#555557; font-size:14px; margin:0.75em 0">测试网络连接状况的时候。</span></li>
 </ol>
-<h2 style="color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">2. 地址栏添加ncr</h2>
-<p style="line-height:1.8em; margin:1.5em 3%">在国内访问Google经常要通过代理，这时自动打开的是代理地的Google站，如<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">www.google.com.hk</code> <code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">www.google.co.jp</code>，搜索结果也被做了一定的本地优化，可能我们并不需要。其实从浏览器地址栏访问<a href="www.google.com/ncr" style="color:#3fa944; text-decoration:none">www.google.com/ncr</a>，就可以重置回无国籍的<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">www.google.com</code>了。（<em style="color:#3fa944">ncr</em>的意思是<em style="color:#3fa944">no country redirect</em>）</p>
-<h2 style="color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">3. "关键词"</h2>
+<h2 style="color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">2. 地址栏添加ncr</h2>
+<p style="line-height:1.8em; margin:1.5em 3%">在国内访问Google经常要通过代理，这时自动打开的是代理地的Google站，如<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">www.google.com.hk</code> <code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">www.google.co.jp</code>，搜索结果也被做了一定的本地优化，可能我们并不需要。其实从浏览器地址栏访问<a href="www.google.com/ncr" style="color:#2298a5; text-decoration:none">www.google.com/ncr</a>，就可以重置回无国籍的<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">www.google.com</code>了。（<em style="color:#2298a5">ncr</em>的意思是<em style="color:#2298a5">no country redirect</em>）</p>
+<h2 style="color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">3. "关键词"</h2>
 <p style="line-height:1.8em; margin:1.5em 3%">用双引号包含关键词，可以进行完全匹配搜索，也就是只有完整包括引号中关键词的网页，才会出现在搜索结果中。建议使用标准的英文双引号，不过如果手滑打了中文的双引号，目前也是可以识别的。中英文的单引号都会被忽略。</p>
 <p style="line-height:1.8em; margin:1.5em 3%">另外引号可以跟通配符<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">*</code>配合使用，<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">*</code>代表任何未知或不确定的字词，比如<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">*个标题公式</code>。（<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">*</code>也可以单独使用）</p>
-<h2 style="color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">4. 关键词 site:域名</h2>
+<h2 style="color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">4. 关键词 site:域名</h2>
 <p style="line-height:1.8em; margin:1.5em 3%">进行站内搜索，例如在搜索框中输入<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">写作方法 site:zhihu.com</code>，在知乎站内搜索”写作方法“。</p>
 <p style="line-height:1.8em; margin:1.5em 3%">不一定要用完整域名，比如<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">学生就业 site:edu</code>，只搜索域名为“edu”结尾的教育网。</p>
-<h2 style="color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">5. 关键词 filetype:文件类型</h2>
+<h2 style="color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">5. 关键词 filetype:文件类型</h2>
 <p style="line-height:1.8em; margin:1.5em 3%">例：<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">商业计划书 filetype:ppt</code>，只搜索网络上的ppt文件。</p>
-<h2 style="color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">6. 关键词 -排除关键词</h2>
+<h2 style="color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">6. 关键词 -排除关键词</h2>
 <p style="line-height:1.8em; margin:1.5em 3%">例：<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">文案写作 -广告</code>，搜索“文案写作”，且结果中不出现“广告”。</p>
-<h2 style="color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">7. 关键词A OR 关键词B</h2>
+<h2 style="color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">7. 关键词A OR 关键词B</h2>
 <p style="line-height:1.8em; margin:1.5em 3%">结果中包含关键词A或者关键词B（或者都有），注意<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">OR</code>要大写，例：<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">微信运营 OR 新媒体运营</code>。不需要<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">AND</code>，因为什么都不加的时候默认就是<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">AND</code>关系，如果需要特别强调某些关键词，请用双引号把它们分别包起来。</p>
-<h2 style="color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">8. related:域名</h2>
+<h2 style="color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">8. related:域名</h2>
 <p style="line-height:1.8em; margin:1.5em 3%">查找具有类似内容的网页，如<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">related:zhihu.com</code>，得到的前几条结果是果壳网、互动百科、搜狗百科、中国百科网、36氪。<code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">related:jianshu.com</code>，前几条结果是知乎、V2EX、果壳、36氪。如果你找到了一个自己喜欢的网站，想要发掘更多类似网站，这是一个好办法。</p>
-<h2 style="color:#3fa944; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">9. 数学运算/绘图等</h2>
+<h2 style="color:#2298a5; font-weight:bold; margin:1.5em 3%; text-align:left; border-bottom:1px solid #eee; font-size:20px" align="left">9. 数学运算/绘图等</h2>
 <ul style="line-height:1.8em; margin:1.5em 3%; font-size:16px; padding-left:1.5em; list-style-type:circle">
 <li style="color:#555556; font-size:15px; margin:0.75em 0"><span style="color:#555557; font-size:14px; margin:0.75em 0"><code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">3..9</code>：代表数字范围3至9。</span></li>
 <li style="color:#555556; font-size:15px; margin:0.75em 0"><span style="color:#555557; font-size:14px; margin:0.75em 0"><code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">1024 * 2048</code>：得出运算结果。</span></li>
@@ -272,6 +272,8 @@ print("Hello, %s！" % your_name)
 <li style="color:#555556; font-size:15px; margin:0.75em 0"><span style="color:#555557; font-size:14px; margin:0.75em 0"><code style="line-height:1.8em; color:#999; border:1px solid #ddd; border-radius:3px; display:inline; padding:3px; white-space:pre-wrap; font-size:14px">100 人民币 = ?美元</code>：得出货币兑换结果。</span></li>
 </ul>
 
+<br>
+<section class="img-wrapper" style="margin:0 3%"><img src="http://placeholder.qiniudn.com/900x400" alt="poster" style="display:block; margin:0 auto; max-width:100%"></section>
 </div>
 </body>
 </html>

@@ -21,9 +21,9 @@
   "para_spacing": "1.5em",
   "title_align": "center",
   "text_color": "#555",
-  "theme_color": "#3fa944",
+  "theme_color": "#2298a5",
   "quote_color": "#999",
-  "poster_url": "",
+  "poster_url": "http://placeholder.qiniudn.com/900x400",
   "auto_archive": true,
   "auto_rename": false
 }
