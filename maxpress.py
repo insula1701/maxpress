@@ -103,7 +103,8 @@ def recursive_listdir(dir):
 
 # 用于处理冲突的文件名
 def autoname(defaultpath):
-    ext = re.search(r'\..+?$', defaultpath).group()
+    try: ext = re.search(r'\..+?$', defaultpath).group()
+    except AttributeError: ext = ' '
     count = 0
     while count < 10000:
         suffix = '(%d)' % count if count > 0 else ''
@@ -115,7 +116,7 @@ def autoname(defaultpath):
 
 
 # 转换temp下的所有md文档
-@report_error
+# @report_error
 def convert_all(src=join_path(ROOT, 'temp'),
                 dst=join_path(ROOT, 'result', 'html'),
                 archive=None, styles=None):  # 通过styles参数传入css文件名列表时，默认样式将失效
@@ -153,7 +154,19 @@ def convert_all(src=join_path(ROOT, 'temp'),
                 os.rename(filepath, archpath)
                 print('存档成功[{}]'.format(archpath.split('/')[-1]))
 
-    if archive: shutil.rmtree(src); os.mkdir(src)
+        else:
+            if archive:
+                # 非.md文件统一移到src一级目录下等待手动删除，以防意外丢失
+                if re.split(r'[/\\]', filepath)[-2] != re.split(r'[/\\]', src)[-1]:
+                    os.rename(filepath, autoname(join_path(src, file)))
+            else: continue
+
+    if archive:
+        # 删除src中剩余的空目录
+        for path in os.listdir(src):
+            try: shutil.rmtree(join_path(src, path))
+            except: pass
+
     print('\n[+] 请进入result／html查看所有生成的HTML文档')
     print('[+] 请进入result／archive查看所有存档的MarkDown文档')
 
