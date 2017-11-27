@@ -103,16 +103,17 @@ def recursive_listdir(dir):
 
 # 用于处理冲突的文件名
 def autoname(defaultpath):
-    try: ext = re.search(r'\..+?$', defaultpath).group()
-    except AttributeError: ext = ' '
+    try: ext = re.search(r'\.\w+?$', defaultpath).group()
+    except AttributeError: ext = None
     count = 0
     while count < 10000:
         suffix = '(%d)' % count if count > 0 else ''
-        newpath = defaultpath[:0 - len(ext)] + suffix + ext
-        if not os.path.exists(newpath):
-            return newpath
+        if ext:
+            newpath = defaultpath[:0 - len(ext)] + suffix + ext
         else:
-            count += 1; pass
+            newpath = defaultpath + suffix
+        if not os.path.exists(newpath): return newpath
+        else: count += 1; continue
 
 
 # 转换temp下的所有md文档
@@ -151,14 +152,14 @@ def convert_all(src=join_path(ROOT, 'temp'),
                 if not os.path.exists(arch_dir): os.mkdir(arch_dir)
                 archpath = join_path(arch_dir, file)
                 if config['auto_rename']: archpath = autoname(archpath)
-                os.rename(filepath, archpath)
+                shutil.move(filepath, archpath)
                 print('存档成功[{}]'.format(archpath.split('/')[-1]))
 
         else:
             if archive:
                 # 非.md文件统一移到src一级目录下等待手动删除，以防意外丢失
                 if re.split(r'[/\\]', filepath)[-2] != re.split(r'[/\\]', src)[-1]:
-                    os.rename(filepath, autoname(join_path(src, file)))
+                    shutil.move(filepath, autoname(join_path(src, file)))
             else: continue
 
     if archive:
