@@ -1,7 +1,7 @@
 from mistune import Markdown
 from six import StringIO
 import premailer, lesscpy
-import sys, os, re, json
+import sys, os, re, json, shutil
 from os.path import join as join_path
 
 
@@ -14,7 +14,7 @@ def import_config(file=join_path(ROOT, 'config.json')):
         text = json_file.read()
         json_text = re.search(r'\{[\s\S]*\}', text).group()  # 去除json文件中的注释
     config = json.loads(json_text)
-    non_style_keys = ['poster_url', 'auto_rename']
+    non_style_keys = ['poster_url', 'uto_archivea', 'auto_rename']
     cfg_lines = ['@{}: {};\n'.format(key, value)
                  for key, value in config.items() if not key in non_style_keys]
     variables = '\n'.join(cfg_lines) + '\n\n'
@@ -103,25 +103,28 @@ def recursive_listdir(dir):
 
 # 用于处理冲突的文件名
 def autoname(defaultpath):
-    ext = re.search(r'\..+?$', defaultpath).group()
+    try: ext = re.search(r'\.\w+?$', defaultpath).group()
+    except AttributeError: ext = None
     count = 0
     while count < 10000:
         suffix = '(%d)' % count if count > 0 else ''
-        newpath = defaultpath[:0 - len(ext)] + suffix + ext
-        if not os.path.exists(newpath):
-            return newpath
+        if ext:
+            newpath = defaultpath[:0 - len(ext)] + suffix + ext
         else:
-            count += 1; pass
+            newpath = defaultpath + suffix
+        if not os.path.exists(newpath): return newpath
+        else: count += 1; continue
 
 
 # 转换temp下的所有md文档
-@report_error
+# @report_error
 def convert_all(src=join_path(ROOT, 'temp'),
                 dst=join_path(ROOT, 'result', 'html'),
-                archive=True, styles=None):  # 通过styles参数传入css文件名列表时，默认样式将失效
+                archive=None, styles=None):  # 通过styles参数传入css文件名列表时，默认样式将失效
 
     print('[+] 正在导入配置文件...', end=' ')
     config = import_config()
+    if archive is None: archive = config['auto_archive']
     print('导入成功')
 
     if not styles:
@@ -149,8 +152,21 @@ def convert_all(src=join_path(ROOT, 'temp'),
                 if not os.path.exists(arch_dir): os.mkdir(arch_dir)
                 archpath = join_path(arch_dir, file)
                 if config['auto_rename']: archpath = autoname(archpath)
-                os.rename(filepath, archpath)
+                shutil.move(filepath, archpath)
                 print('存档成功[{}]'.format(archpath.split('/')[-1]))
+
+        else:
+            if archive:
+                # 非.md文件统一移到src一级目录下等待手动删除，以防意外丢失
+                if re.split(r'[/\\]', filepath)[-2] != re.split(r'[/\\]', src)[-1]:
+                    shutil.move(filepath, autoname(join_path(src, file)))
+            else: continue
+
+    if archive:
+        # 删除src中剩余的空目录
+        for path in os.listdir(src):
+            try: shutil.rmtree(join_path(src, path))
+            except: pass
 
     print('\n[+] 请进入result／html查看所有生成的HTML文档')
     print('[+] 请进入result／archive查看所有存档的MarkDown文档')
