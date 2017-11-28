@@ -14,7 +14,7 @@
 3. 目前只测试了Win/Mac上的**Chrome**浏览器，如果这一步出现格式丢失/错乱等情况，请在issue中反馈，说明你**遇到的问题、使用的系统和浏览器。**
 4. 支持多个`.md`文件、多个子目录（包括嵌套子目录）的批量转换。
 5. 默认进行自动存档，即转换完毕后将所有原始`.md`文件移动至`result／archive`目录下，可修改配置文件（auto_archive）禁用此功能。
-6. 如果出现文件名冲突的情况，默认同文件名自动覆盖，可修改配置文件（aoto_rename）改为进行自动重命名。
+6. 如果出现文件名冲突的情况，默认同文件名自动覆盖，可修改配置文件（auto_rename）改为进行自动重命名。
 
 ## 格式调整
 
@@ -44,3 +44,6 @@
 
 [`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) -> 
 [`example.html`](https://github.com/insula1701/maxpress/blob/master/result/html) （html请下载后在浏览器中打开）
+
+公众号文章示例：[MarkDown微信排版说明及示例](https://mp.weixin.qq.com/s?__biz=MzI2OTEzODc0MQ==&mid=2247483679&idx=1&sn=e37b7ca4c2a586afc5021e00ee90c32a)
+

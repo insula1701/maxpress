@@ -4,13 +4,13 @@
 
 1. 批量转换MarkDown文档为适合粘贴微信编辑器的HTML文件。
 2. 支持自定义：正文字号、文字颜色（正文颜色、主题色、引用色）、行间距、段间距、标题水平对齐方式、内容两侧留白比例、底部图片。
-3. 转换完成的MarkDown文档自动移动存档。
+3. 转换完成的MarkDown文档可以自动移动存档。
 
 ## 开始使用
 
 ### 下载
 
-[下载最新稳定版本：Windows版/Mac版/Python源码](https://github.com/insula1701/maxpress/releases)
+[下载最新稳定版本：Windows版/Mac版](https://github.com/insula1701/maxpress/releases)
 
 ### 使用Windows/Mac版可执行程序
 
@@ -28,7 +28,7 @@
 3. 目前只测试了Win/Mac上的**Chrome**浏览器，如果这一步出现格式丢失/错乱等情况，请在issue中反馈，说明你**遇到的问题、使用的系统和浏览器。**
 4. 支持多个`.md`文件、多个子目录（包括嵌套子目录）的批量转换。
 5. 默认进行自动存档，即转换完毕后将所有原始`.md`文件移动至`result／archive`目录下，可修改配置文件（auto_archive）禁用此功能。
-6. 如果出现文件名冲突的情况，默认同文件名自动覆盖，可修改配置文件（aoto_rename）改为进行自动重命名。
+6. 如果出现文件名冲突的情况，默认同文件名自动覆盖，可修改配置文件（auto_rename）改为进行自动重命名。
 
 
 #### 格式调整
@@ -57,8 +57,10 @@
 
 #### 示例
 
-[`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) ->
- [`example.html`](https://github.com/insula1701/maxpress/blob/master/temp/example.html)
+[`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) -> 
+[`example.html`](https://github.com/insula1701/maxpress/blob/master/result/html) （html请下载后在浏览器中打开）
+
+公众号文章示例：[MarkDown微信排版说明及示例](https://mp.weixin.qq.com/s?__biz=MzI2OTEzODc0MQ==&mid=2247483679&idx=1&sn=e37b7ca4c2a586afc5021e00ee90c32a)
 
 ### 使用Python脚本【推荐】
 
