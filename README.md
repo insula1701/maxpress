@@ -57,8 +57,8 @@
 
 #### 示例
 
-[`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) ->
- [`example.html`](https://github.com/insula1701/maxpress/blob/master/temp/example.html)
+[`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) -> 
+[`example.html`](https://github.com/insula1701/maxpress/blob/master/result/html) （html请下载后在浏览器中打开）
 
 公众号文章示例：[MarkDown微信排版说明及示例](https://mp.weixin.qq.com/s?__biz=MzI2OTEzODc0MQ==&mid=2247483679&idx=1&sn=e37b7ca4c2a586afc5021e00ee90c32a)
 
