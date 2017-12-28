@@ -1,6 +1,9 @@
 本文档中包括了Markdown的常用语法示例及说明。
 你可以将本文档由.md转换为.html，并粘贴到微信编辑器中测试显示效果。
 
+参照本文档中的MarkDown语法，你可以使用[MaxPress](https://github.com/insula1701/maxpress)轻松实现微信公众号一键排版。
+详情请见：<https://github.com/insula1701/maxpress>
+
 -------------
 
 Mardown是一种简洁高效的轻量级标记语言。
