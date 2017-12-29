@@ -1,20 +1,20 @@
-@theme_color: #3fa944;
-
-@text_color: #555;
-
-@quote_color: #999;
-
-@line_height: 1.8em;
-
 @main_margin: 3%;
-
-@main_size: 16px;
-
-@title_align: center;
 
 @para_spacing: 1.5em;
 
+@quote_color: #999;
+
+@main_size: 16px;
+
+@line_height: 1.8em;
+
 @auto_archive: True;
+
+@theme_color: #3fa944;
+
+@title_align: center;
+
+@text_color: #555;
 
 
 // 运行时程序将根据本文件中定义的格式自动生成default.less
@@ -22,7 +22,7 @@
 
 .wrapper {
   font-size: @main_size;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   color: @text_color;
   margin: auto 20%;
   text-align: justify;
@@ -113,6 +113,7 @@ li span, li p {
   margin: @para_spacing * 0.5 0;
   font-size: @main_size - 2px;
   color: @text_color + #000002;
+  letter-spacing: 0.05em;
 }
 
 ul ul, ul ol, ol ul, ol ol {
@@ -238,7 +239,7 @@ dl dd {
   padding: 0 10px;
 }
 
-a {
+a{
   color: @theme_color;
   text-decoration: none;
 }

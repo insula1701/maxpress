@@ -1,6 +1,6 @@
 .wrapper {
  font-size: 16px;
- letter-spacing: 0.1em;
+ letter-spacing: 0.05em;
  color: #555555;
  margin: auto 20%;
  text-align: justify;
@@ -92,6 +92,7 @@ li p {
  margin: 0.75em 0;
  font-size: 14px;
  color: #555557;
+ letter-spacing: 0.05em;
 }
 ul ul,
 ul ol,
