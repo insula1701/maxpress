@@ -6,11 +6,19 @@
 2. 支持自定义：正文字号、文字颜色（正文颜色、主题色、引用色）、行间距、段间距、标题水平对齐方式、内容两侧留白比例、底部图片。
 3. 转换完成的MarkDown文档可以自动移动存档。
 
+## 示例
+
+[`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) -> 
+[`example.html`](https://github.com/insula1701/maxpress/blob/master/result/html) （html请下载后在浏览器中打开）
+
+公众号文章示例：[微信公众号MarkDown排版完全指南](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=2247483702&idx=1&sn=299bbc21da02ccba1fb92554b7ec5b94&chksm=ea8f8e8addf8079cdc393413955c34af1003d4466ee15082eefa6d44eb97b9b4c83b64123721)
+
+
 ## 开始使用
 
-### 下载
+建议直接使用Python脚本，如果你没有安装Python，可以使用编译好的可执行程序，支持Windows/Mac。
 
-[下载最新稳定版本：Windows版/Mac版](https://github.com/insula1701/maxpress/releases)
+[请在此处下载稳定版本。](https://github.com/insula1701/maxpress/releases)
 
 ### 使用Windows/Mac版可执行程序
 
@@ -29,7 +37,6 @@
 4. 支持多个`.md`文件、多个子目录（包括嵌套子目录）的批量转换。
 5. 默认进行自动存档，即转换完毕后将所有原始`.md`文件移动至`result／archive`目录下，可修改配置文件（auto_archive）禁用此功能。
 6. 如果出现文件名冲突的情况，默认同文件名自动覆盖，可修改配置文件（auto_rename）改为进行自动重命名。
-
 
 #### 格式调整
 
@@ -54,13 +61,6 @@
 #### 更多自定义
 
 如果你希望覆盖默认样式中的个别样式，可以自主编写`custom.css`，它将在`default.css`之后被引入。
-
-#### 示例
-
-[`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) -> 
-[`example.html`](https://github.com/insula1701/maxpress/blob/master/result/html) （html请下载后在浏览器中打开）
-
-公众号文章示例：[微信公众号MarkDown排版完全指南](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=2247483702&idx=1&sn=299bbc21da02ccba1fb92554b7ec5b94&chksm=ea8f8e8addf8079cdc393413955c34af1003d4466ee15082eefa6d44eb97b9b4c83b64123721)
 
 ### 使用Python脚本【推荐】
 
@@ -90,11 +90,6 @@ maxpress.convert_all(archive=True, styles=None)
 如果你希望整体弃用默认样式并启用自定义CSS样式表，可以通过`styles`参数传入自定义CSS文件路径（支持用列表传入多个），这时`config.json`中用于定义样式的参数将会失效，`custom.css`将在你的全部自定义样式表之后引入。
 
 带样式的列表粘贴到微信编辑器时，可能意外出现格式丢失的情况（貌似是微信的bug？），目前通过在每个`li`元素内额外添加一个`span`元素包装样式，暂时可以解决。但要注意，如果自定义样式的话，为`li span`所设置的字号、颜色等不能与上级元素完全一致，否则在粘贴到微信编辑器时会被自动去掉。
-
-## 示例
-
-[`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) -> 
-[`example.html`](https://github.com/insula1701/maxpress/blob/master/result/html) （html请下载后在浏览器中打开）
 
 ## 后续开发计划
 

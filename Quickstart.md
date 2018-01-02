@@ -45,5 +45,5 @@
 [`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) -> 
 [`example.html`](https://github.com/insula1701/maxpress/blob/master/result/html) （html请下载后在浏览器中打开）
 
-公众号文章示例：[微信公众号MarkDown排版完全指南](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=100000048&idx=1&sn=7bb0a7fd4cd92ed6b753e996e7eaf0ce&chksm=6a8f8e8c5df8079af7324b2505670d2abd0e83552873fcdaf7acf52ae8b25399380d60a5d778&mpshare=1&scene=1&srcid=1229tvTWQ1h4dDLJEYny9An8&key=dd3ea87ce1ad0714eaba7dea68d348c20f5b3fb8317e722240f1ef78c7894661ea5fdd718290986a650fdf3b2dd72762d7f4afd75e91ed2a0c7731a2a687388c964eb644526833a72f511f019b2ccb21&ascene=0&uin=MjE0NzM5NTU4MQ%3D%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.4+build(16E195)&version=12020810&nettype=WIFI&lang=zh_CN&fontScale=100&pass_ticket=6iRWB3aLBCQOXpS5n6I%2BNeH5AK3ygPJiPOMvcoNPo5bULSUy%2BHV4uZXOUJKw3n%2FK)
+公众号文章示例：[微信公众号MarkDown排版完全指南](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=2247483702&idx=1&sn=299bbc21da02ccba1fb92554b7ec5b94&chksm=ea8f8e8addf8079cdc393413955c34af1003d4466ee15082eefa6d44eb97b9b4c83b64123721)
 
