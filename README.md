@@ -11,8 +11,7 @@
 [`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) -> 
 [`example.html`](https://github.com/insula1701/maxpress/blob/master/result/html) （html请下载后在浏览器中打开）
 
-公众号文章示例：[微信公众号MarkDown排版完全指南](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=2247483702&idx=1&sn=299bbc21da02ccba1fb92554b7ec5b94&chksm=ea8f8e8addf8079cdc393413955c34af1003d4466ee15082eefa6d44eb97b9b4c83b64123721)
-
+公众号文章示例：[微信公众号MarkDown排版完全指南](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=2247483712&idx=1&sn=e8c2c8e9478045e335033b84f12be46e&chksm=ea8f8efcddf807ea61ce72618e0d89dd755635108cb898bbe1c103fcf2a4a029dc629e35b87b)
 
 ## 开始使用
 
