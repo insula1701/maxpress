@@ -1,23 +1,25 @@
 # MaxPress：MarkDown+Python实现微信公众号一键排版
 
+-------------
+更新针对非技术人员的小白教程：
+
+**【上篇：基本原理】**[《懒人福音： 怎样做一个从不排版的微信小编？》](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=2247483713&idx=1&sn=0ec80785ce60503eb30e4ce27ac89781&chksm=ea8f8efdddf807ebb5137b1f0d8c652bcaa33e861d2c0544b50aeed051361b904cf194f6f844)
+
+**【下篇：语法指南】** [《微信公众号MarkDown排版完全指南》](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=2247483712&idx=1&sn=e8c2c8e9478045e335033b84f12be46e&chksm=ea8f8efcddf807ea61ce72618e0d89dd755635108cb898bbe1c103fcf2a4a029dc629e35b87b)
+
+-------------
+
 ## 基本功能
 
 1. 批量转换MarkDown文档为适合粘贴微信编辑器的HTML文件。
 2. 支持自定义：正文字号、文字颜色（正文颜色、主题色、引用色）、行间距、段间距、标题水平对齐方式、内容两侧留白比例、底部图片。
 3. 转换完成的MarkDown文档可以自动移动存档。
 
-## 示例
-
-[`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) -> 
-[`example.html`](https://github.com/insula1701/maxpress/blob/master/result/html) （html请下载后在浏览器中打开）
-
-公众号文章示例：[微信公众号MarkDown排版完全指南](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=2247483712&idx=1&sn=e8c2c8e9478045e335033b84f12be46e&chksm=ea8f8efcddf807ea61ce72618e0d89dd755635108cb898bbe1c103fcf2a4a029dc629e35b87b)
-
 ## 开始使用
 
-建议直接使用Python脚本，如果你没有安装Python，可以使用编译好的可执行程序，支持Windows/Mac。
+### 下载
 
-[请在此处下载稳定版本。](https://github.com/insula1701/maxpress/releases)
+[下载最新稳定版本：Windows版/Mac版](https://github.com/insula1701/maxpress/releases)
 
 ### 使用Windows/Mac版可执行程序
 
@@ -36,6 +38,7 @@
 4. 支持多个`.md`文件、多个子目录（包括嵌套子目录）的批量转换。
 5. 默认进行自动存档，即转换完毕后将所有原始`.md`文件移动至`result／archive`目录下，可修改配置文件（auto_archive）禁用此功能。
 6. 如果出现文件名冲突的情况，默认同文件名自动覆盖，可修改配置文件（auto_rename）改为进行自动重命名。
+
 
 #### 格式调整
 
@@ -60,6 +63,13 @@
 #### 更多自定义
 
 如果你希望覆盖默认样式中的个别样式，可以自主编写`custom.css`，它将在`default.css`之后被引入。
+
+#### 示例
+
+[`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) -> 
+[`example.html`](https://github.com/insula1701/maxpress/blob/master/result/html) （html请下载后在浏览器中打开）
+
+公众号文章示例：[微信公众号MarkDown排版完全指南](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=100000048&idx=1&sn=7bb0a7fd4cd92ed6b753e996e7eaf0ce&chksm=6a8f8e8c5df8079af7324b2505670d2abd0e83552873fcdaf7acf52ae8b25399380d60a5d778&mpshare=1&scene=1&srcid=1229tvTWQ1h4dDLJEYny9An8&key=dd3ea87ce1ad0714eaba7dea68d348c20f5b3fb8317e722240f1ef78c7894661ea5fdd718290986a650fdf3b2dd72762d7f4afd75e91ed2a0c7731a2a687388c964eb644526833a72f511f019b2ccb21&ascene=0&uin=MjE0NzM5NTU4MQ%3D%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.4+build(16E195)&version=12020810&nettype=WIFI&lang=zh_CN&fontScale=100&pass_ticket=6iRWB3aLBCQOXpS5n6I%2BNeH5AK3ygPJiPOMvcoNPo5bULSUy%2BHV4uZXOUJKw3n%2FK)
 
 ### 使用Python脚本【推荐】
 
@@ -89,6 +99,11 @@ maxpress.convert_all(archive=True, styles=None)
 如果你希望整体弃用默认样式并启用自定义CSS样式表，可以通过`styles`参数传入自定义CSS文件路径（支持用列表传入多个），这时`config.json`中用于定义样式的参数将会失效，`custom.css`将在你的全部自定义样式表之后引入。
 
 带样式的列表粘贴到微信编辑器时，可能意外出现格式丢失的情况（貌似是微信的bug？），目前通过在每个`li`元素内额外添加一个`span`元素包装样式，暂时可以解决。但要注意，如果自定义样式的话，为`li span`所设置的字号、颜色等不能与上级元素完全一致，否则在粘贴到微信编辑器时会被自动去掉。
+
+## 示例
+
+[`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) -> 
+[`example.html`](https://github.com/insula1701/maxpress/blob/master/result/html) （html请下载后在浏览器中打开）
 
 ## 后续开发计划
 

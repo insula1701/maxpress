@@ -22,6 +22,7 @@
 
 包括：
 
+
 | 变量名 | 默认值 | 说明 |
 | :----- | :----- | :---- |
 |main_size     |16px   |正文主字号|
@@ -40,10 +41,8 @@
 
 如果你希望覆盖默认样式中的个别样式，可以自主编写`custom.css`，它将在`default.css`之后被引入。
 
-## 示例
+## 示例&更多用法参考
 
-[`example.md`](https://github.com/insula1701/maxpress/blob/master/temp/example.md) -> 
-[`example.html`](https://github.com/insula1701/maxpress/blob/master/result/html) （html请下载后在浏览器中打开）
+[《懒人福音： 怎样做一个从不排版的微信小编？》](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=2247483713&idx=1&sn=0ec80785ce60503eb30e4ce27ac89781&chksm=ea8f8efdddf807ebb5137b1f0d8c652bcaa33e861d2c0544b50aeed051361b904cf194f6f844)
 
-公众号文章示例：[微信公众号MarkDown排版完全指南](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=2247483712&idx=1&sn=e8c2c8e9478045e335033b84f12be46e&chksm=ea8f8efcddf807ea61ce72618e0d89dd755635108cb898bbe1c103fcf2a4a029dc629e35b87b)
-
+[《微信公众号MarkDown排版完全指南》](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=2247483712&idx=1&sn=e8c2c8e9478045e335033b84f12be46e&chksm=ea8f8efcddf807ea61ce72618e0d89dd755635108cb898bbe1c103fcf2a4a029dc629e35b87b)
