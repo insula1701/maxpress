@@ -1,22 +1,35 @@
-@main_margin: 3%;
-
-@para_spacing: 1.5em;
+@main_size: 16px;
 
 @line_height: 1.8em;
 
-@main_size: 16px;
+@text_color: #555;
 
-@quote_color: #999;
+@para_spacing: 1.5em;
+
+@main_margin: 3%;
+
+@h2_align: left;
+
+@h3_align: center;
+
+@h6_align: center;
+
+@h1_align: left;
+
+@h5_align: center;
+
+@content_align: left;
+
+@h4_align: center;
 
 @theme_color: #3fa944;
 
-@text_color: #555;
-
-@title_align: center;
+@quote_color: #999;
 
 
 // 运行时程序将根据本文件中定义的格式自动生成default.less
 // 如需通过less自定义样式，请在本文件中修改
+
 
 .wrapper {
   font-size: @main_size;
@@ -29,6 +42,10 @@
 
 p, ul, ol, blockquote, q, pre, code {
   line-height: @line_height;
+}
+
+p, ul, ol, blockquote, q {
+  text-align: @content_align;
 }
 
 p {
@@ -47,40 +64,45 @@ h1, h2 {
   font-weight: bold !important;
   color: @theme_color !important;
   margin: @para_spacing @main_margin !important;
-  text-align: left !important;
 }
+
 
 h3, h4, h5, h6 {
   font-weight: bold !important;
   color: @theme_color !important;
   margin: @para_spacing @main_margin !important;
-  text-align: @title_align !important;
 }
 
 h1 {
   font-size: @main_size + 8px !important;
   border-bottom: 1px solid #ddd !important;
+  text-align: @h1_align !important;
 }
 
 h2 {
   font-size: @main_size + 4px !important;
   border-bottom: 1px solid #eee !important;
+  text-align: @h2_align !important;
 }
 
 h3 {
   font-size: @main_size + 2px;
+  text-align: @h3_align !important;
 }
 
 h4 {
   font-size: @main_size;
+  text-align: @h4_align !important;
 }
 
 h5 {
   font-size: @main_size - 2px;
+  text-align: @h5_align !important;
 }
 
 h6 {
   font-size: @main_size - 4px;
+  text-align: @h6_align !important;
 }
 
 hr {

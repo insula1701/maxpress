@@ -31,7 +31,7 @@
 |quote_color   |#999   |引用框和代码框内文字颜色|
 |line_height   |2em    |正文行高|
 |para_spacing  |1.5em  |正文段间距|
-|title_align   |left   |标题水平对齐方式，建议`left`或`center`（仅支持h3-h6，h1、h2固定使用左对齐）|
+|align         |多项    |各部分的水平对齐方式，建议`left`或`center`（h1～h6代表标题1～标题6，content代表正文）|
 |main_margin   |3%     |内容两侧留白比例|
 |poster_url    |""     |底部二维码／海报图片的地址|
 |auto_archive  |""     |是否自动存档（转换后将原始`.md`文件移动至`result／archive`目录下）|

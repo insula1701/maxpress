@@ -15,6 +15,13 @@ pre,
 code {
  line-height: 1.8em;
 }
+p,
+ul,
+ol,
+blockquote,
+q {
+ text-align: left;
+}
 p {
  margin: 1.5em 3% !important;
 }
@@ -31,7 +38,6 @@ h2 {
  font-weight: bold !important;
  color: #3fa944 !important;
  margin: 1.5em 3% !important;
- text-align: left !important;
 }
 h3,
 h4,
@@ -40,27 +46,32 @@ h6 {
  font-weight: bold !important;
  color: #3fa944 !important;
  margin: 1.5em 3% !important;
- text-align: center !important;
 }
 h1 {
  font-size: 24px !important;
  border-bottom: 1px solid #dddddd !important;
+ text-align: left !important;
 }
 h2 {
  font-size: 20px !important;
  border-bottom: 1px solid #eeeeee !important;
+ text-align: left !important;
 }
 h3 {
  font-size: 18px;
+ text-align: center !important;
 }
 h4 {
  font-size: 16px;
+ text-align: center !important;
 }
 h5 {
  font-size: 14px;
+ text-align: center !important;
 }
 h6 {
  font-size: 12px;
+ text-align: center !important;
 }
 hr {
  border-top: 2px solid #3fa944;

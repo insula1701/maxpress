@@ -14,11 +14,23 @@ def import_config(file=join_path(ROOT, 'config.json')):
         text = json_file.read()
         json_text = re.search(r'\{[\s\S]*\}', text).group()  # 去除json文件中的注释
     config = json.loads(json_text)
+
     non_style_keys = ['poster_url', 'banner_url',
                       'auto_archive', 'auto_rename']
-    cfg_lines = ['@{}: {};\n'.format(key, value)
-                 for key, value in config.items() if not key in non_style_keys]
+
+    # 读取配置文件中的变量，最多支持两级嵌套
+    cfg_lines = []
+    for key, value in config.items():
+        if not key in non_style_keys:
+            if not isinstance(value, dict):
+                cfg_lines.append('@{}: {};\n'.format(key, value))
+            else:
+                for inner_key, inner_value in value.items():
+                    cfg_lines.append('@{}: {};\n'.format(
+                        inner_key + '_' + key, inner_value))
+
     variables = '\n'.join(cfg_lines) + '\n\n'
+
     with open(join_path(ROOT, 'less', 'styles.less'), encoding='utf-8') as styles_file:
         styles = styles_file.read()
     with open(join_path(ROOT, 'less', 'default.less'), 'w', encoding='utf-8') as default_less:
