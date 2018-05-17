@@ -14,7 +14,8 @@ def import_config(file=join_path(ROOT, 'config.json')):
         text = json_file.read()
         json_text = re.search(r'\{[\s\S]*\}', text).group()  # 去除json文件中的注释
     config = json.loads(json_text)
-    non_style_keys = ['poster_url', 'uto_archivea', 'auto_rename']
+    non_style_keys = ['poster_url', 'banner_url',
+                      'auto_archive', 'auto_rename']
     cfg_lines = ['@{}: {};\n'.format(key, value)
                  for key, value in config.items() if not key in non_style_keys]
     variables = '\n'.join(cfg_lines) + '\n\n'
@@ -36,21 +37,25 @@ def compile_styles(file=join_path(ROOT, 'less', 'default.less')):
 
 
 # 将待解析的md文档转换为适合微信编辑器的html
-def md2html(text, styles=None, poster=''):
+def md2html(text, styles=None, poster='', banner=''):
     md = Markdown()
     inner_html = md(text)
-    result = premailer.transform(pack_html(inner_html, styles, poster))
+    result = premailer.transform(pack_html(inner_html, styles, poster, banner))
     return result
 
-def pack_html(html, styles=None, poster=''):
+def pack_html(html, styles=None, poster='', banner=''):
     if not styles: styles = [join_path(ROOT, 'css','default.css')]
     styles.append(join_path(ROOT, 'css','custom.css'))
     style_tags = ['<link rel="stylesheet" type="text/css" href="{}">'.format(sheet)
          for sheet in styles]
 
     if len(poster.strip()) > 0:
-        poster_tag = '\n<br>\n<img src="{}" alt="poster"／'.format(poster)
+        poster_tag = '\n<br>\n<img src="{}" alt="poster"／>'.format(poster)
     else: poster_tag = ''
+
+    if len(banner.strip()) > 0:
+        banner_tag = '<img src="{}" alt="banner"／>'.format(banner)
+    else: banner_tag = ''
 
     head = """<!DOCTYPE html><html lang="zh-cn">
           <head>
@@ -59,7 +64,9 @@ def pack_html(html, styles=None, poster=''):
           {styles}
           </head>
           <body>
-          <div class="wrapper">\n""".format(styles='\n'.join(style_tags))
+          <div class="wrapper">
+          {banner}\n""".format(styles='\n'.join(style_tags),
+                               banner=banner_tag)
 
     foot = """{}\n</div>\n</body>\n</html>""".format(poster_tag)
 
@@ -80,6 +87,7 @@ def fix_tbl(html):    # 修正HTML表格左右留白问题
     result = re.sub(r'<table>([\s\S]*?)</table>',
                    r'<section class="tbl-wrapper"><table>\1</table></section>', html)
     return result
+
 
 
 # 装饰器：提供报错功能
@@ -139,7 +147,9 @@ def convert_all(src=join_path(ROOT, 'temp'),
             print('[+] 正在转换{}...'.format(file), end=' ')
             with open(filepath, encoding='utf-8') as md_file:
                 text = md_file.read()
-            result = md2html(text, styles, poster=config['poster_url'])
+            result = md2html(text, styles,
+                             poster=config['poster_url'],
+                             banner=config['banner_url'])
             htmlpath = join_path(dst, file[:-3] + '.html')
             if config['auto_rename']: htmlpath = autoname(htmlpath)
             with open(htmlpath,'w', encoding='utf-8') as html_file:
