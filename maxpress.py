@@ -16,6 +16,7 @@ def import_config(file=join_path(ROOT, 'config.json')):
     config = json.loads(json_text)
 
     non_style_keys = ['poster_url', 'banner_url',
+                      'convert_list', 'ul_style',
                       'auto_archive', 'auto_rename']
 
     # 读取配置文件中的变量，最多支持两级嵌套
@@ -49,8 +50,21 @@ def compile_styles(file=join_path(ROOT, 'less', 'default.less')):
 
 
 # 将待解析的md文档转换为适合微信编辑器的html
-def md2html(text, styles=None, poster='', banner=''):
+def md2html(text, styles=None, poster='', banner='', convert_list=True, ul_style='\u25CB'):
     md = Markdown()
+
+    # 将markdown列表转化为带序号的普通段落（纯为适应微信中列表序号样式自动丢失的古怪现象）
+    if convert_list:
+        blocks = text.split('\n```')
+        for i in range(0, len(blocks)):
+            if i % 2 == 0:
+                blocks[i] = re.sub(r'(\n\d+)(\.\s.*?)', r'\n\1\\\2', blocks[i])
+                blocks[i] = re.sub(r'\n[\-\+\*](\s.*?)',
+                                   u'\n\n{} \1'.format(ul_style), blocks[i])
+            else:
+                continue  # 跳过代码块内部内容
+        text = '\n```'.join(blocks)
+
     inner_html = md(text)
     result = premailer.transform(pack_html(inner_html, styles, poster, banner))
     return result
@@ -161,7 +175,9 @@ def convert_all(src=join_path(ROOT, 'temp'),
                 text = md_file.read()
             result = md2html(text, styles,
                              poster=config['poster_url'],
-                             banner=config['banner_url'])
+                             banner=config['banner_url'],
+                             convert_list=config['convert_list'],
+                             ul_style=config['ul_style'])
             htmlpath = join_path(dst, file[:-3] + '.html')
             if config['auto_rename']: htmlpath = autoname(htmlpath)
             with open(htmlpath,'w', encoding='utf-8') as html_file:

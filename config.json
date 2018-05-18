@@ -34,6 +34,8 @@
   },
   "banner_url": "",
   "poster_url": "",
+  "convert_list": true,
+  "ul_style": "○",
   "auto_archive": true,
   "auto_rename": false
 }
