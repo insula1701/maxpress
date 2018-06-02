@@ -27,16 +27,16 @@ p {
 }
 strong,
 b {
- color: #3fa944;
+ color: #349971;
 }
 em,
 i {
- color: #3fa944;
+ color: #349971;
 }
 h1,
 h2 {
  font-weight: bold !important;
- color: #3fa944 !important;
+ color: #349971 !important;
  margin: 1.5em 3% !important;
 }
 h3,
@@ -44,7 +44,7 @@ h4,
 h5,
 h6 {
  font-weight: bold !important;
- color: #3fa944 !important;
+ color: #349971 !important;
  margin: 1.5em 3% !important;
 }
 h1 {
@@ -74,7 +74,7 @@ h6 {
  text-align: center !important;
 }
 hr {
- border-top: 2px solid #3fa944;
+ border-top: 2px solid #349971;
  margin: 3em 3%;
 }
 table,
@@ -202,8 +202,8 @@ table tr td {
 table tr th {
  font-weight: bold;
  color: #eeeeee;
- border: 1px solid #3fa944;
- background-color: #3fa944;
+ border: 1px solid #349971;
+ background-color: #349971;
 }
 dl {
  padding: 0;
@@ -218,6 +218,6 @@ dl dd {
  padding: 0 10px;
 }
 a {
- color: #3fa944;
+ color: #349971;
  text-decoration: none;
 }
