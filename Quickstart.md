@@ -46,6 +46,4 @@
 
 ## 示例&更多用法参考
 
-[《懒人福音： 怎样做一个从不排版的微信小编？》](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=2247483713&idx=1&sn=0ec80785ce60503eb30e4ce27ac89781&chksm=ea8f8efdddf807ebb5137b1f0d8c652bcaa33e861d2c0544b50aeed051361b904cf194f6f844)
-
-[《微信公众号MarkDown排版完全指南》](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=2247483712&idx=1&sn=e8c2c8e9478045e335033b84f12be46e&chksm=ea8f8efcddf807ea61ce72618e0d89dd755635108cb898bbe1c103fcf2a4a029dc629e35b87b)
+[《微信公众号MarkDown排版完全指南》](https://mp.weixin.qq.com/s?__biz=MzI2NjM5NDMyMw==&mid=2247483718&idx=1&sn=199baa9a257f2783381a11cc5f60344d)
